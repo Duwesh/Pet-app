@@ -3,10 +3,10 @@ import { useState } from "react";
 //Typography
 import { Typography } from "@mui/material";
 import Button from "@mui/material/Button";
-
+import { useNavigate } from "react-router-dom";
 export const Create = () => {
   const [form, setForm] = useState({});
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { id, value } = e.target;
     setForm({ ...form, [id]: value });
@@ -16,12 +16,17 @@ export const Create = () => {
     e.preventDefault();
     axios.post("http://localhost:8080/data", form).then(() => {
       alert("New Pet Data Created Successfully!");
+      navigate("/");
       console.log(form);
     });
   };
   return (
     <>
-      <Typography variant="h6" color="secondary" style={{textAlign: "center", fontWeight: "bold"}}>
+      <Typography
+        variant="h6"
+        color="secondary"
+        style={{ textAlign: "center", fontWeight: "bold" }}
+      >
         Create New Pet
       </Typography>
       <form

@@ -94,6 +94,25 @@
       "outdoor_size": "medium",
       "transport": "No",
       "id": 5
+    },
+    {
+      "name": "Cat",
+      "city": "Ranchi",
+      "address": "Gopalnagar",
+      "capacity": "3",
+      "cost": "799",
+      "selectVerify": "yes",
+      "rating": "5",
+      "Accepted_Pet_type": "Dog",
+      "Accepted_Pet_size": "10-20kg",
+      "adult_supervision": "Pets will never be left unattended",
+      "sleep_place": "Wherever they want",
+      "potty": "2",
+      "walks": "2",
+      "type_of_home": "",
+      "outdoor_size": "small",
+      "transport": "Yes",
+      "id": 6
     }
   ]
 }
