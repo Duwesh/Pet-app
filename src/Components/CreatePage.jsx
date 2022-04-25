@@ -21,10 +21,23 @@ export const Create = () => {
   };
   return (
     <>
-      <Typography variant="h6">Create New Pet</Typography>
-      <form onSubmit={handleSubmit} className="create_div">
+      <Typography variant="h6" color="secondary" style={{textAlign: "center", fontWeight: "bold"}}>
+        Create New Pet
+      </Typography>
+      <form
+        onSubmit={handleSubmit}
+        className="create_div"
+        style={{
+          border: "1px solid teal",
+          padding: "5px",
+          display: "flex",
+          flexDirection: "column",
+          width: "30%",
+          justifyContent: "center",
+          margin: "10px auto",
+        }}
+      >
         <label htmlFor="name">Enter Pet Name: </label>
-
         <input
           type="text"
           id="name"
@@ -33,7 +46,6 @@ export const Create = () => {
           onChange={handleChange}
         />
         <br />
-
         <label htmlFor="city">Enter City: </label>
         <input
           type="text"
@@ -43,7 +55,6 @@ export const Create = () => {
           onChange={handleChange}
         />
         <br />
-
         <label htmlFor="address">Enter Address: </label>
         <input
           type="text"
@@ -54,7 +65,6 @@ export const Create = () => {
         />
         <br />
         <label htmlFor="capacity">Enter Capacity: </label>
-
         <input
           type="text"
           id="capacity"
@@ -64,7 +74,6 @@ export const Create = () => {
         />
         <br />
         <label htmlFor="cost">Enter Cost: </label>
-
         <input
           type="number"
           id="cost"
@@ -75,13 +84,12 @@ export const Create = () => {
         <br />
         <label htmlFor="selectVerify">Verified: </label>
         <select name="" id="selectVerify" onChange={handleChange}>
-          <option value="">---Select---</option>
+          <option value="">Select</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
         <br />
         <label htmlFor="rating">Give Rating: </label>
-
         <input
           type="text"
           id="rating"
@@ -90,12 +98,10 @@ export const Create = () => {
           onChange={handleChange}
         />
         <br />
-
         <label htmlFor="Accepted_Pet_type">Accepted Pet type: </label>
-
         <select name="" id="Accepted_Pet_type" onChange={handleChange}>
           <br />
-          <option value="">--Selec--</option>
+          <option value="">Select Pet</option>
           <option value="Dog">Dog</option>
           <option value="Cats">Cats</option>
           <option value="Rabbits">Rabbits</option>
@@ -104,7 +110,7 @@ export const Create = () => {
         <label htmlFor="Accepted_Pet_size">Accepted Pet size</label>
         <select name="" id="Accepted_Pet_size" onChange={handleChange}>
           <br />
-          <option value="">--Select--</option>
+          <option value="">Select Weight</option>
           <option value="1-5kg">1-5kg</option>
           <option value="5-10kg">5-10kg</option>
           <option value="10-20kg">10-20kg</option>
@@ -113,10 +119,9 @@ export const Create = () => {
         </select>
         <br />
         <label htmlFor="adult_supervision">Level of adult supervision: </label>
-
         <select name="" id="adult_supervision" onChange={handleChange}>
           <br />
-          <option value="yes">---Select---</option>
+          <option value="yes">Select</option>
           <option value="Pets will never be left unattended">
             Pets will never be left unattended
           </option>
@@ -129,7 +134,7 @@ export const Create = () => {
         <label htmlFor="sleep_place">Place of sleep: </label>
         <select name="" id="sleep_place" onChange={handleChange}>
           <br />
-          <option value="">--Sleep--</option>
+          <option value="">Sleep Place</option>
           <option value="Wherever they want">Wherever they want</option>
           <option value="Need some specific place">
             Need some specific place
@@ -141,7 +146,7 @@ export const Create = () => {
           type="number"
           id="potty"
           min={1}
-          max={5}
+          max={6}
           required
           onChange={handleChange}
         />
@@ -151,22 +156,21 @@ export const Create = () => {
           type="number"
           id="walks"
           min={1}
-          max={5}
+          max={6}
           required
           onChange={handleChange}
         />
         <br />
         <label htmlFor="type_of_home">Type of Home : </label>
-
         <select name="" id="type_of_home" required onChange={handleChange}>
-          <option value="">--select--</option>
+          <option value="">Select</option>
           <option value="">House</option>
           <option value="">Apartment</option>
         </select>
         <br />
         <label htmlFor="outdoor_size">Outdoor Area Size Required : </label>
         <select name="" id="outdoor_size" required onChange={handleChange}>
-          <option value="">--select--</option>
+          <option value="">Select</option>
           <option value="small">small</option>
           <option value="medium">medium</option>
           <option value="large">large</option>
@@ -179,9 +183,17 @@ export const Create = () => {
           <option value="No">No</option>
         </select>
         <br />
-        <input type="submit" value={"Submit"} />
+        <input
+          type="submit"
+          value={"Submit"}
+          style={{
+            backgroundColor: "teal",
+            border: "none",
+            padding: "5px 10px",
+            borderRadius: "3px",
+          }}
+        />
         {/* <Button variant="contained" onClick={() => handleSubmit()} color="error" value={"Submit"} size="small"> */}
-          Submit
         {/* </Button> */}
       </form>
     </>
